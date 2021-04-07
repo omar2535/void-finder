@@ -64,11 +64,14 @@ def distance_between_points(x1, y1, z1, x2, y2, z2):
   return math.sqrt(((x2 - x1) ** 2) + ((y2 - y1) ** 2) + ((z2 - z1)**2))
 
 # Assumes spherical void
-# Determines if number of galaxies in sphere is smaller than average density
+# Determines if number of galaxies in sphere is smaller than average density by at least 20%
 def is_void(num_galaxies_in_range, average_density, radius):
+  percentage_offset = 0.8
   volume_of_sphere = 4/3 * (math.pi * math.pow(radius, 3))
-  threshold_num_galaxies = volume_of_sphere * average_density
+  threshold_num_galaxies = volume_of_sphere * average_density * percentage_offset
+
   return num_galaxies_in_range < threshold_num_galaxies
+
 
 # TODO: Simplify the list of voids
 # Combines void lists for those that are similar

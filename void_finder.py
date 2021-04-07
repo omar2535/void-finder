@@ -5,6 +5,7 @@ import numpy as np
 import eagleSqlTools as sql
 from matplotlib import pyplot as plt
 import plotly.express as px
+import time
 
 '''Constants to be used in the program'''
 DB_USERNAME = "xyz"
@@ -17,6 +18,7 @@ REDSHIFT = 0
 VOID_RADIUS = 5
 
 def main():
+  start_time = time.time()
   print("Starting void finder program")
 
   connection = sql.connect(user=DB_USERNAME, password=DB_PASSWORD, url=DB_URL)
@@ -33,9 +35,11 @@ def main():
   """Calculate the average density of galaxies"""
   average_density = calculate_average_density(data, MIN_POSITION, MAX_POSITION)
 
+  """Calculate void positions"""
   # list_of_voids = get_list_of_void_positions(data, MIN_POSITION, MAX_POSITION, average_density, VOID_RADIUS)
   list_of_voids = get_galaxies_in_voids(data, average_density, VOID_RADIUS)
-
+  
+  print("--- %s seconds ---" % (time.time() - start_time))
 
   """For plotting the galaxies in 3d space"""
   # plot_galaxies_in_3d_space(data)
