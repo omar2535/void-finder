@@ -16,6 +16,10 @@ This project used the [VIRGO Database](http://gavo.mpa-garching.mpg.de/Millenniu
 2. `pip install requirements.txt`
 3. `python void_finder.py`
 
+## Results
+
+Results can be found [here](./results.md)
+
 ## Credit
 
 This work uses the implementation from [halos2gal_wSQL](https://github.com/viogp/halos2gal_wSQL) for querying the Millennium databases.
