@@ -62,7 +62,7 @@ def plot_galaxies_and_voids(data, voids):
   ))
 
   fig.update_layout(
-    title="Mini-millenium galaxy plot",
+    title="Mini-millennium galaxy plot",
     xaxis_title="x - 1/h Mpc",
     yaxis_title="y - 1/h Mpc",
     legend_title="Legend"
