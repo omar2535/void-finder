@@ -22,4 +22,4 @@ Results can be found [here](./results.md)
 
 ## Credit
 
-This work uses the implementation from [halos2gal_wSQL](https://github.com/viogp/halos2gal_wSQL) for querying the Millennium databases.
+This work uses the implementation from [halos2gal_wSQL](https://github.com/viogp/halos2gal_wSQL) to quer the Millennium databases.
